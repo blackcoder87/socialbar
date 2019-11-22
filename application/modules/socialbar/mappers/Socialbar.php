@@ -21,11 +21,11 @@ class Socialbar extends \Ilch\Mapper
         }
 
         $socials = [];
-        foreach ($socialArray as $socialqRow) {
+        foreach ($socialArray as $socialRow) {
             $socialModel = new SocialModel();
             $socialModel->setId($socialRow['id']);
-            $socialModel->setCatId($socialqRow['icon']);
-            $socialModel->setQuestion($socialqRow['link']);
+            $socialModel->setCatId($socialRow['icon']);
+            $socialModel->setQuestion($socialRow['link']);
             $socialModel->setAnswer($socialRow['text']);
 
             $socials[] = $socialModel;
