@@ -6,7 +6,7 @@
 
 namespace Modules\Socialbar\Models;
 
-class Faq extends \Ilch\Model
+class Socialbar extends \Ilch\Model
 {
     /**
      * The id of the social.
@@ -28,6 +28,13 @@ class Faq extends \Ilch\Model
      * @var string
      */
     protected $link;
+
+    /**
+     * The link of the social.
+     *
+     * @var string
+     */
+    protected $text;
 
     /**
      * Gets the id of the social.
@@ -94,6 +101,29 @@ class Faq extends \Ilch\Model
     public function setLink($link)
     {
         $this->link = (string)$link;
+
+        return $this;
+    }
+
+    /**
+     * Gets the icon of the social.
+     *
+     * @return string
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * Sets the icon of the social.
+     *
+     * @param string $icon
+     * @return this
+     */
+    public function setText($text)
+    {
+        $this->text = (string)$text;
 
         return $this;
     }
