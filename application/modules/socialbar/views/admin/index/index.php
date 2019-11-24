@@ -13,16 +13,16 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th><?=$this->getCheckAllCheckbox('check_socials') ?></th>
+                        <th><?=$this->getCheckAllCheckbox('check_social') ?></th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($this->get('socials') as $social): ?>
-                        <?php $socials = $socialMapper->getSocialById($social->getSocialId()); ?>
+                    <?php foreach ($this->get('social') as $social): ?>
+                        <?php $social = $socialMapper->getSocialById($social->getSocialId()); ?>
                         <tr>
-                            <td><?=$this->getDeleteCheckbox('check_faqs', $faq->getId()) ?></td>
+                            <td><?=$this->getDeleteCheckbox('check_social', $faq->getId()) ?></td>
                             <td><?=$this->getEditIcon(['action' => 'treat', 'id' => $faq->getId()]) ?></td>
                             <td><?=$this->getDeleteIcon(['action' => 'delsocial', 'id' => $faq->getId()]) ?></td>
                             <td><?=$this->escape($faqsCats->getTitle()) ?></td>
