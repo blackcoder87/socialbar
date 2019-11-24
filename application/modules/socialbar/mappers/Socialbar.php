@@ -5,6 +5,7 @@
  */
 
 namespace Modules\Socialbar\Mappers;
+use Modules\Socialbar\Models\Socialbar as SocialbarModel;
 
 class Socialbar extends \Ilch\Mapper
 {
@@ -22,40 +23,40 @@ class Socialbar extends \Ilch\Mapper
 
         $socials = [];
         foreach ($socialArray as $socialRow) {
-            $socialModel = new SocialModel();
+            $socialModel = new SocialbarModel();
             $socialModel->setId($socialRow['id']);
-            $socialModel->setCatId($socialRow['icon']);
-            $socialModel->setQuestion($socialRow['link']);
-            $socialModel->setAnswer($socialRow['text']);
+            $socialModel->setIcon($socialRow['icon']);
+            $socialModel->setLink($socialRow['link']);
+            $socialModel->setText($socialRow['text']);
 
-            $socials[] = $socialModel;
+            $social[] = $socialbarModel;
         }
 
-        return $socials;
+        return $social;
     }
 
     public function getSocialById($id)
     {
         $socials = $this->getSocials(['id' => $id]);
-        return reset($socials);
+        return reset($social);
     }
 
-    public function save(SocialModel $social)
+    public function save(SocialbarModel $social)
     {
         $fields = [
-            'id' => $fsocial->getId(),
+            'id' => $social->getId(),
             'icon' => $social->getIcon(),
             'link' => $social->getLink(),
             'text' => $social->getText()
         ];
 
         if ($social->getId()) {
-            $this->db()->update('socials')
+            $this->db()->update('social')
                 ->values($fields)
                 ->where(['id' => $social->getId()])
                 ->execute();
         } else {
-            $this->db()->insert('socials')
+            $this->db()->insert('social')
                 ->values($fields)
                 ->execute();
         }
@@ -63,7 +64,7 @@ class Socialbar extends \Ilch\Mapper
 
     public function delete($id)
     {
-        $this->db()->delete('socials')
+        $this->db()->delete('social')
             ->where(['id' => $id])
             ->execute();
     }
