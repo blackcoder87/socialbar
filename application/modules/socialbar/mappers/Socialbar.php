@@ -37,7 +37,7 @@ class Socialbar extends \Ilch\Mapper
 
     public function getSocialById($id)
     {
-        $socials = $this->getSocials(['id' => $id]);
+        $social = $this->getSocial(['id' => $id]);
         return reset($social);
     }
 

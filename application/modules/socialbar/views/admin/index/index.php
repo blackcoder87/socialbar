@@ -25,8 +25,8 @@
                             <td><?=$this->getDeleteCheckbox('check_social', $faq->getId()) ?></td>
                             <td><?=$this->getEditIcon(['action' => 'treat', 'id' => $faq->getId()]) ?></td>
                             <td><?=$this->getDeleteIcon(['action' => 'delsocial', 'id' => $faq->getId()]) ?></td>
-                            <td><?=$this->escape($faqsCats->getTitle()) ?></td>
-                            <td><?=$this->escape($faq->getQuestion()) ?></td>
+                            <td><?=$this->escape($social->getIcon()) ?></td>
+                            <td><?=$this->escape($social->getText()) ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
