@@ -3,7 +3,7 @@
 namespace Modules\Socialbar\Controllers\Admin;
 
 use Modules\Socialbar\Mappers\Socialbar as SocialMapper;
-use Modules\Socialbar\Models\Socialbar as SocialModels;
+use Modules\Socialbar\Models\Socialbar as SocialModel;
 use Ilch\Validation;
 
 class Index extends \Ilch\Controller\Admin
@@ -23,12 +23,12 @@ class Index extends \Ilch\Controller\Admin
                     'url' => $this->getLayout()->getUrl(['controller' => 'index', 'action' => 'treat'])
                 ]
             ],
-            [
-                'name' => 'menuCats',
-                'active' => false,
-                'icon' => 'fa fa-th-list',
-                'url' => $this->getLayout()->getUrl(['controller' => 'cats', 'action' => 'index'])
-            ]
+            //[
+            //    'name' => 'menuCats',
+            //    'active' => false,
+            //    'icon' => 'fa fa-th-list',
+            //    'url' => $this->getLayout()->getUrl(['controller' => 'cats', 'action' => 'index'])
+            //]
         ];
 
         if ($this->getRequest()->getActionName() == 'treat') {
@@ -83,7 +83,7 @@ class Index extends \Ilch\Controller\Admin
             ]);
 
             if ($validation->isValid()) {
-                $model = new SocialMapper();
+                $model = new SocialModel();
 
                 if ($this->getRequest()->getParam('id')) {
                     $model->setId($this->getRequest()->getParam('id'));
@@ -104,6 +104,8 @@ class Index extends \Ilch\Controller\Admin
                   ->to(['action' => 'treat', 'id' => $this->getRequest()->getParam('id')]);
             }
         }
+
+        $this->getView()->set('socials', $socialMapper->getSocial());
     }
 
     public function delSocialAction()
