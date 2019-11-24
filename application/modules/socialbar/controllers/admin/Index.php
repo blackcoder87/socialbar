@@ -75,6 +75,35 @@ class Index extends \Ilch\Controller\Admin
                     ->add($this->getTranslator()->trans('menuSocial'), ['action' => 'index'])
                     ->add($this->getTranslator()->trans('add'), ['action' => 'treat']);
         }
+        if ($this->getRequest()->isPost()) {
+            $validation = Validation::create($this->getRequest()->getPost(), [
+                'icon' => 'required',
+                'link' => 'required',
+                'text' => 'required'
+            ]);
+
+            if ($validation->isValid()) {
+                $model = new SocialMapper();
+
+                if ($this->getRequest()->getParam('id')) {
+                    $model->setId($this->getRequest()->getParam('id'));
+                }
+
+                $model->setIcon($this->getRequest()->getPost('icon'));
+                $model->setLink($this->getRequest()->getPost('link'));
+                $model->setText($this->getRequest()->getPost('text'));
+                $socialMapper->save($model);
+
+                $this->addMessage('saveSuccess');
+                $this->redirect(['action' => 'index']);
+            } else {
+                $this->addMessage($validation->getErrorBag()->getErrorMessages(), 'danger', true);
+                $this->redirect()
+                  ->withInput()
+                  ->withErrors($validation->getErrorBag())
+                  ->to(['action' => 'treat', 'id' => $this->getRequest()->getParam('id')]);
+            }
+        }
     }
 
     public function delSocialAction()
