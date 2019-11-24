@@ -9,28 +9,28 @@ namespace Modules\Socialbar\Models;
 class Faq extends \Ilch\Model
 {
     /**
-     * The id of the faq.
+     * The id of the social.
      *
      * @var int
      */
     protected $id;
 
     /**
-     * The question of the faq.
+     * The icon of the social.
      *
      * @var string
      */
     protected $icon;
 
     /**
-     * The answer of the faq.
+     * The link of the social.
      *
      * @var string
      */
     protected $link;
 
     /**
-     * Gets the id of the faq.
+     * Gets the id of the social.
      *
      * @return int
      */
@@ -40,7 +40,7 @@ class Faq extends \Ilch\Model
     }
 
     /**
-     * Sets the id of the faq.
+     * Sets the id of the social.
      *
      * @param int $id
      * @return this
@@ -53,7 +53,7 @@ class Faq extends \Ilch\Model
     }
 
     /**
-     * Gets the question of the faq.
+     * Gets the icon of the social.
      *
      * @return string
      */
@@ -63,9 +63,9 @@ class Faq extends \Ilch\Model
     }
 
     /**
-     * Sets the question of the faq.
+     * Sets the icon of the social.
      *
-     * @param string $question
+     * @param string $icon
      * @return this
      */
     public function setIcon($icon)
@@ -76,7 +76,7 @@ class Faq extends \Ilch\Model
     }
 
     /**
-     * Gets the answer of the faq.
+     * Gets the link of the social.
      *
      * @return string
      */
@@ -86,7 +86,7 @@ class Faq extends \Ilch\Model
     }
 
     /**
-     * Sets the answer of the faq.
+     * Sets the link of the social.
      *
      * @param string $answer
      * @return this
