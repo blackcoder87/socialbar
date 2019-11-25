@@ -16,16 +16,19 @@
                         <th><?=$this->getCheckAllCheckbox('check_social') ?></th>
                         <th></th>
                         <th></th>
+                        <th><?=$this->getTrans('socialIcon') ?></th>
+                        <th><?=$this->getTrans('sociallink') ?></th>
+                        <th><?=$this->getTrans('socialtext') ?></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($this->get('social') as $social): ?>
-                        <?php $social = $socialMapper->getSocialById($social->getSocialId()); ?>
+                    <?php foreach ($this->get('socials') as $social): ?>
                         <tr>
-                            <td><?=$this->getDeleteCheckbox('check_social', $faq->getId()) ?></td>
-                            <td><?=$this->getEditIcon(['action' => 'treat', 'id' => $faq->getId()]) ?></td>
-                            <td><?=$this->getDeleteIcon(['action' => 'delsocial', 'id' => $faq->getId()]) ?></td>
+                            <td><?=$this->getDeleteCheckbox('check_social', $social->getId()) ?></td>
+                            <td><?=$this->getEditIcon(['action' => 'treat', 'id' => $social->getId()]) ?></td>
+                            <td><?=$this->getDeleteIcon(['action' => 'delsocial', 'id' => $social->getId()]) ?></td>
                             <td><?=$this->escape($social->getIcon()) ?></td>
+                            <td><?=$this->escape($social->getLink()) ?></td>
                             <td><?=$this->escape($social->getText()) ?></td>
                         </tr>
                     <?php endforeach; ?>

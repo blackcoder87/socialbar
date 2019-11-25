@@ -26,6 +26,16 @@ class Config extends \Ilch\Config\Install
                 'description' => 'Here you can manage your Social Network - joined weren ',
             ],
         ],
+        'boxes' => [
+            'socialbar' => [
+                'de_DE' => [
+                    'name' => 'Social Bar'
+                ],
+                'en_EN' => [
+                    'name' => 'Social Bar'
+                ]
+            ]
+        ],
         'ilchCore' => '2.0.0',
         'phpVersion' => '5.6'
     ];
