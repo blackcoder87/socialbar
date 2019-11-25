@@ -13,4 +13,5 @@ return [
     'sociallink' => 'Link',
     'socialtext' => 'Anzeige Text',
     'socialicon' => 'Icon',
+    'pleaseSelect' => 'Icon´s auswahl',
 ];
