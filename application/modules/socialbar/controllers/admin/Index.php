@@ -78,7 +78,7 @@ class Index extends \Ilch\Controller\Admin
         if ($this->getRequest()->isPost()) {
             $validation = Validation::create($this->getRequest()->getPost(), [
                 'icon' => 'required',
-                'link' => 'required',
+                'link' => 'required|url',
                 'text' => 'required'
             ]);
 
