@@ -1,8 +1,6 @@
 <?php
 $socials = $this->get('socials');
 $socialMapper = $this->get('socialMapper');
-$socials = $socialMapper->getSocial();
-$this->getView()->set('socials', $socials);
 ?>
 
 <?php if (!empty($socials)): ?>
