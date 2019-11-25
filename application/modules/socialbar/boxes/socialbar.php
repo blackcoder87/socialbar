@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\SocialBar\Boxes;
+namespace Modules\Socialbar\Boxes;
 
 use Modules\Socialbar\Mappers\Socialbar as SocialMapper;
 
