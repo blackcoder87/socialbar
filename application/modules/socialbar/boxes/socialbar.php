@@ -4,7 +4,7 @@ namespace Modules\SocialBar\Boxes;
 
 use Modules\Socialbar\Mappers\Socialbar as SocialMapper;
 
-class SocialBar extends \Ilch\Box
+class Socialbar extends \Ilch\Box
 {
     public function render()
     {

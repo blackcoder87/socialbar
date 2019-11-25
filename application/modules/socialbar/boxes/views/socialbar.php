@@ -2,9 +2,12 @@
 $socialMapper = $this->get('socialMapper');
 ?>
 
-<?php
-if (!empty($this->get('social'))): ?>
-    <?php echo 'Hallo Welt';?>
+<?php if (!empty($this->get('social'))): ?>
+  <ul>
+    <?php foreach ($socials as $social): ?>
+        <li class="list-group-item"><a href="<?=$this->escape($social->getLink()) ?>"><b><?=$this->escape($social->getText()) ?> ?></b></a></li>
+    <?php endforeach; ?>
+  </ul>
 <?php else: ?>
     <?=$this->getTrans('noSocial') ?>
 <?php endif; ?>
