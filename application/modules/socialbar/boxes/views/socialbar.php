@@ -5,9 +5,15 @@ $socialMapper = $this->get('socialMapper');
 ?>
 
 <?php if (!empty($socials)): ?>
-    <ul class="list-unstyled ilch_menu_ul">
+    <ul class="list-unstyled">
         <?php foreach ($socials as $social): ?>
-            <li class="list-group-item"><a href="<?=$this->escape($social->getLink()) ?>"><b><?=$this->escape($social->getText()) ?> ?></b></a></li>
+            <li>
+              <a href="<?=$this->escape($social->getLink()) ?>" target="_blank"><?=$this->escape($social->getText()) ?>
+                <div class="btn-social-icon">
+        		     <i class="fa <?=$this->escape($social->getIcon()) ?>"></i>
+                </div>
+              </a>
+            </li>
         <?php endforeach; ?>
     </ul>
 <?php else: ?>
