@@ -21,6 +21,7 @@
                   <option value="fa-twitter">&#xf099; fa-twitter</option>
                   <option value="fa-steam-square">&#xf1b7; fa-steam-square</option>
                   <option value="fa-twitch">&#xf1e8; fa-twitch</option>
+                  <option value="fa-youtube">&#xf167; fa-youtube</option>
               </select>
             </div>
         </div>
