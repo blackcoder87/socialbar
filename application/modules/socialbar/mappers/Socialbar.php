@@ -9,13 +9,6 @@ use Modules\Socialbar\Models\Socialbar as SocialbarModel;
 
 class Socialbar extends \Ilch\Mapper
 {
-  /**
-     * Gets socil.
-     *
-     * @param array $where
-     * @return SocialbarModel[]|[]
-     */
-
   public function getSocial($where = [])
     {
         $socialArray = $this->db()->select('*')
@@ -36,30 +29,17 @@ class Socialbar extends \Ilch\Mapper
             $socialModel->setLink($socialRow['link']);
             $socialModel->setText($socialRow['text']);
 
-            $social[] = $socialbarModel;
+            $social[] = $socialModel;
         }
 
         return $social;
     }
-
-    /**
-     * Gets social by id.
-     *
-     * @param integer $id
-     * @return SocialbarModel|null
-     */
 
     public function getSocialById($id)
     {
         $social = $this->getSocial(['id' => $id]);
         return reset($social);
     }
-
-    /**
-     * Inserts or updates social model.
-     *
-     * @param SocialbarModel $social
-     */
 
     public function save(SocialbarModel $social)
     {
@@ -81,12 +61,6 @@ class Socialbar extends \Ilch\Mapper
                 ->execute();
         }
     }
-
-    /**
-     * Deletes social with given id.
-     *
-     * @param integer $id
-     */
 
     public function delete($id)
     {

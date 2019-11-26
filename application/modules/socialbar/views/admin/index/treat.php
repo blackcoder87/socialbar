@@ -14,12 +14,14 @@
                 <?=$this->getTrans('socialicon') ?>:
             </label>
             <div class="col-lg-4">
-                <input type="text"
-                       class="form-control"
-                       id="icon"
-                       name="icon"
-                        required
-                       value="<?php if ($this->get('social') != '') { echo $this->escape($this->get('social')->getLink()); } else { echo $this->originalInput('icon'); } ?>" />
+              <select class="form-control fontawesome-select" id="socialicon" name="icon">
+                  <option value=""  disabled><?=$this->getTrans('pleaseSelect') ?></option>
+                  <option value="fa-globe">&#xf0ac; fa-globe</option>
+                  <option value="fa-facebook">&#xf09a; fa-facebook</option>
+                  <option value="fa-twitter">&#xf099; fa-twitter</option>
+                  <option value="fa-steam-square">&#xf1b7; fa-steam-square</option>
+                  <option value="fa-twitch">&#xf1e8; fa-twitch</option>
+              </select>
             </div>
         </div>
         <div class="form-group <?=$this->validation()->hasError('icon') ? 'has-error' : '' ?>">
@@ -31,21 +33,19 @@
                        class="form-control"
                        id="link"
                        name="link"
-                        required
-                       value="<?php if ($this->get('social') != '') { echo $this->escape($this->get('social')->getLink()); } else { echo $this->originalInput('icon'); } ?>" />
+                       value="<?php if ($this->get('social') != '') { echo $this->escape($this->get('social')->getLink()); } else { echo $this->originalInput('link'); } ?>" />
             </div>
         </div>
         <div class="form-group <?=$this->validation()->hasError('text') ? 'has-error' : '' ?>">
             <label for="text" class="col-lg-2 control-label">
                 <?=$this->getTrans('socialtext') ?>:
             </label>
-            <div class="col-lg-10">
+            <div class="col-lg-4">
                 <input    type="text"
-                          class="form-control ckeditor"
-                          id="ck_1"
+                          class="form-control"
+                          id="text"
                           name="text"
-                           required
-                          toolbar="ilch_html"><?php if ($this->get('social') != '') { echo $this->escape($this->get('social')->getText()); } else { echo $this->originalInput('text'); } ?></input>
+                          value="<?php if ($this->get('social') != '') { echo $this->escape($this->get('social')->getText()); } else { echo $this->originalInput('text'); } ?>" />
             </div>
         </div>
         <?php if (!empty($this->get('social'))) {
@@ -55,5 +55,3 @@
         }
         ?>
     </form>
-
-<?=$this->getDialog('mediaModal', $this->getTrans('media'), '<iframe frameborder="0"></iframe>'); ?>
