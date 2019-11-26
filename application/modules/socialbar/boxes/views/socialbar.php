@@ -1,4 +1,4 @@
-<link href="<?=$this->getBoxUrl('socialbar/static/css/socialbar.css') ?>" rel="stylesheet">
+<link href="<?=$this->getBoxUrl('static/css/socialbar.css') ?>" rel="stylesheet">
 <?php
 $socials = $this->get('socials');
 $socialMapper = $this->get('socialMapper');
