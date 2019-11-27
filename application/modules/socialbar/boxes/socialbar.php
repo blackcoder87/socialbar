@@ -11,7 +11,6 @@ class Socialbar extends \Ilch\Box
         $socialMapper = new SocialMapper();
 
         $socials = $socialMapper->getSocial();
-        $this->getView()->set('socialMapper', $socialMapper);
         $this->getView()->set('socials', $socials);
     }
 }

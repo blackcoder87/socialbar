@@ -10,20 +10,18 @@ class Config extends \Ilch\Config\Install
 {
     public $config = [
         'key' => 'socialbar',
-        'version' => '1.0',
+        'version' => '1.0.0',
         'icon_small' => 'fa-question-circle',
         'author' => 'Slipi',
         'link' => 'http://ilch.de',
-        // 'isLayout' => true,
-        // 'hide_menu' => true,
         'languages' => [
             'de_DE' => [
                 'name' => 'Social-Bar',
-                'description' => 'Hier können die Sociale Netzwercke - hienzugefühgt werden',
+                'description' => 'Hier können soziale Netzwerke hinzugefügt werden',
             ],
             'en_EN' => [
                 'name' => 'Social-Bar',
-                'description' => 'Here you can manage your Social Network - joined weren ',
+                'description' => 'Here you can add social networks.',
             ],
         ],
         'boxes' => [

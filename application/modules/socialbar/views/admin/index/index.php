@@ -1,6 +1,6 @@
 <h1><?=$this->getTrans('manage') ?></h1>
 <?php if (!empty($this->get('socials'))): ?>
-    <form class="form-horizontal" method="POST" action="">
+    <form class="form-horizontal" method="POST">
         <?=$this->getTokenField() ?>
         <div class="table-responsive">
             <table class="table table-hover table-striped">
@@ -16,9 +16,9 @@
                         <th><?=$this->getCheckAllCheckbox('check_social') ?></th>
                         <th></th>
                         <th></th>
-                        <th><?=$this->getTrans('socialIcon') ?></th>
-                        <th><?=$this->getTrans('sociallink') ?></th>
-                        <th><?=$this->getTrans('socialtext') ?></th>
+                        <th><?=$this->getTrans('icon') ?></th>
+                        <th><?=$this->getTrans('link') ?></th>
+                        <th><?=$this->getTrans('text') ?></th>
                     </tr>
                 </thead>
                 <tbody>

@@ -1,22 +1,19 @@
-<link href="<?=$this->getBoxUrl('static/css/socialbar.css') ?>" rel="stylesheet">
 <?php
 $socials = $this->get('socials');
 ?>
 
+<h1><?=$this->getTrans('socials') ?></h1>
 <?php if (!empty($socials)): ?>
-  <div id="social">
     <ul class="list-unstyled">
         <?php foreach ($socials as $social): ?>
             <li>
-              <a href="<?=$this->escape($social->getLink()) ?>" target="_blank"><?=$this->escape($social->getText()) ?>
                 <div class="btn-social-icon">
-        		     <i class="fa <?=$this->escape($social->getIcon()) ?>"></i>
+                    <i class="fa <?=$this->escape($social->getIcon()) ?>"></i>
                 </div>
-              </a>
+                <a href="<?=$this->escape($social->getLink()) ?>" target="_blank"><?=$this->escape($social->getText()) ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
-  </div>
 <?php else: ?>
     <?=$this->getTrans('noSocial') ?>
 <?php endif; ?>

@@ -7,11 +7,10 @@
 return [
     'menuSocial' => 'Social-Bar',
     'socials' => 'Social',
-    'noSocial' => 'Keine Icon vorhanden',
+    'noSocial' => 'Keine Icons vorhanden',
     'addIcons' => 'Icon erstellen',
-    'socialIcon' => 'Icon',
-    'sociallink' => 'Link',
-    'socialtext' => 'Anzeige Text',
-    'socialicon' => 'Icon',
-    'pleaseSelect' => 'Icon´s auswahl',
+    'icon' => 'Icon',
+    'link' => 'Link',
+    'text' => 'Text',
+    'pleaseSelect' => 'Icon Auswahl',
 ];

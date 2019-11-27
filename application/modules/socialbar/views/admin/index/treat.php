@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <h1>
     <?php if (!empty($this->get('social'))) {
         echo $this->getTrans('edit');
@@ -6,15 +7,15 @@
     }
     ?>
 </h1>
-    <form class="form-horizontal" method="POST" action="">
+    <form class="form-horizontal" method="POST">
         <?=$this->getTokenField() ?>
 
         <div class="form-group <?=$this->validation()->hasError('icon') ? 'has-error' : '' ?>">
             <label for="icon" class="col-lg-2 control-label">
-                <?=$this->getTrans('socialicon') ?>:
+                <?=$this->getTrans('icon') ?>:
             </label>
             <div class="col-lg-4">
-              <select class="form-control fontawesome-select" id="socialicon" name="icon">
+              <select class="form-control fontawesome-select" id="icon" name="icon">
                   <option value=""  disabled><?=$this->getTrans('pleaseSelect') ?></option>
                   <option value="fa-globe">&#xf0ac; fa-globe</option>
                   <option value="fa-facebook">&#xf09a; fa-facebook</option>
@@ -25,28 +26,27 @@
               </select>
             </div>
         </div>
-        <div class="form-group <?=$this->validation()->hasError('icon') ? 'has-error' : '' ?>">
+        <div class="form-group <?=$this->validation()->hasError('link') ? 'has-error' : '' ?>">
             <label for="link" class="col-lg-2 control-label">
-                <?=$this->getTrans('sociallink') ?>:
+                <?=$this->getTrans('link') ?>:
             </label>
             <div class="col-lg-4">
-                <input type="link"
+                <input type="url"
                        class="form-control"
                        id="link"
                        name="link"
-                       value="<?php if ($this->get('social') != '') { echo $this->escape($this->get('social')->getLink()); } else { echo $this->originalInput('link'); } ?>" />
+                       value="<?=($this->get('social') != '') ? $this->escape($this->get('social')->getLink()) : $this->escape($this->originalInput('link')) ?>" />
             </div>
         </div>
         <div class="form-group <?=$this->validation()->hasError('text') ? 'has-error' : '' ?>">
             <label for="text" class="col-lg-2 control-label">
-                <?=$this->getTrans('socialtext') ?>:
+                <?=$this->getTrans('text') ?>:
             </label>
-            <div class="col-lg-4">
-                <input    type="text"
-                          class="form-control"
-                          id="text"
-                          name="text"
-                          value="<?php if ($this->get('social') != '') { echo $this->escape($this->get('social')->getText()); } else { echo $this->originalInput('text'); } ?>" />
+            <input type="text"
+                       class="form-control"
+                       id="text"
+                       name="text"
+                       value="<?=($this->get('social') != '') ? $this->escape($this->get('social')->getText()) : $this->escape($this->originalInput('text')) ?>" />
             </div>
         </div>
         <?php if (!empty($this->get('social'))) {

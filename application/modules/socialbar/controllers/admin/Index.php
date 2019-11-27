@@ -23,15 +23,9 @@ class Index extends \Ilch\Controller\Admin
                     'url' => $this->getLayout()->getUrl(['controller' => 'index', 'action' => 'treat'])
                 ]
             ],
-            //[
-            //    'name' => 'menuCats',
-            //    'active' => false,
-            //    'icon' => 'fa fa-th-list',
-            //    'url' => $this->getLayout()->getUrl(['controller' => 'cats', 'action' => 'index'])
-            //]
         ];
 
-        if ($this->getRequest()->getActionName() == 'treat') {
+        if ($this->getRequest()->getActionName() === 'treat') {
             $items[0][0]['active'] = true;
         } else {
             $items[0]['active'] = true;
@@ -51,8 +45,8 @@ class Index extends \Ilch\Controller\Admin
         $this->getLayout()->getAdminHmenu()
                 ->add($this->getTranslator()->trans('menuSocial'), ['action' => 'index']);
 
-        if ($this->getRequest()->getPost('action') == 'delete' && $this->getRequest()->getPost('check_socials')) {
-            foreach ($this->getRequest()->getPost('check_socials') as $socialId) {
+        if ($this->getRequest()->getPost('action') === 'delete' && $this->getRequest()->getPost('check_social')) {
+            foreach ($this->getRequest()->getPost('check_social') as $socialId) {
                 $socialMapper->delete($socialId);
             }
         }
@@ -75,6 +69,7 @@ class Index extends \Ilch\Controller\Admin
                     ->add($this->getTranslator()->trans('menuSocial'), ['action' => 'index'])
                     ->add($this->getTranslator()->trans('add'), ['action' => 'treat']);
         }
+
         if ($this->getRequest()->isPost()) {
             $validation = Validation::create($this->getRequest()->getPost(), [
                 'icon' => 'required',
