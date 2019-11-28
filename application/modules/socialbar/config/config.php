@@ -17,7 +17,7 @@ class Config extends \Ilch\Config\Install
         'languages' => [
             'de_DE' => [
                 'name' => 'Social-Bar',
-                'description' => 'Hier können soziale Netzwerke hinzugefügt werden',
+                'description' => 'Hier können soziale Netzwerke hinzugefügt werden.',
             ],
             'en_EN' => [
                 'name' => 'Social-Bar',
