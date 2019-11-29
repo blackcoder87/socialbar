@@ -9,7 +9,13 @@ use Modules\Socialbar\Models\Socialbar as SocialbarModel;
 
 class Socialbar extends \Ilch\Mapper
 {
-  public function getSocial($where = [])
+    /**
+     * Get social (optionally with a condition)
+     *
+     * @param array $where
+     * @return array|SocialbarModel[]
+     */
+    public function getSocial($where = [])
     {
         $socialArray = $this->db()->select('*')
             ->from('social')
@@ -35,12 +41,23 @@ class Socialbar extends \Ilch\Mapper
         return $social;
     }
 
+    /**
+     * Get social by id.
+     *
+     * @param $id
+     * @return mixed
+     */
     public function getSocialById($id)
     {
         $social = $this->getSocial(['id' => $id]);
         return reset($social);
     }
 
+    /**
+     * Save social to database.
+     *
+     * @param SocialbarModel $social
+     */
     public function save(SocialbarModel $social)
     {
         $fields = [
@@ -62,6 +79,11 @@ class Socialbar extends \Ilch\Mapper
         }
     }
 
+    /**
+     * Delete social by id.
+     *
+     * @param $id
+     */
     public function delete($id)
     {
         $this->db()->delete('social')
