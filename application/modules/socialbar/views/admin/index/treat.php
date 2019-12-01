@@ -15,7 +15,7 @@
             </label>
             <div class="col-lg-4">
               <select class="form-control fontawesome-select" id="icon" name="icon">
-                  <option value="" disabled><?=$this->getTrans('pleaseSelect') ?></option>
+                  <option value=""  disabled><?=$this->getTrans('pleaseSelect') ?></option>
                   <option value="fa-globe">&#xf0ac; fa-globe</option>
                   <option value="fa-facebook">&#xf09a; fa-facebook</option>
                   <option value="fa-twitter">&#xf099; fa-twitter</option>
@@ -41,13 +41,8 @@
             <label for="text" class="col-lg-2 control-label">
                 <?=$this->getTrans('text') ?>:
             </label>
-<<<<<<< HEAD
             <div class="col-lg-8">
             <input type="text"
-=======
-            <div class="col-lg-4">
-                <input type="text"
->>>>>>> ef464a3b2b71d74fb4910673028c70a57f9ecf45
                        class="form-control"
                        id="text"
                        name="text"

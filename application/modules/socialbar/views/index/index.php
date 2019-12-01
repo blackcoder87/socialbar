@@ -2,6 +2,8 @@
 $socials = $this->get('socials');
 ?>
 
+<link href="<?=$this->getModuleUrl('static/css/socialbar.css') ?>" rel="stylesheet">
+
 <h1><?=$this->getTrans('socials') ?></h1>
 <?php if (!empty($socials)): ?>
     <ul class="list-unstyled">
