@@ -50,13 +50,13 @@ class Config extends \Ilch\Config\Install
 
     public function getInstallSql()
     {
-			return	'CREATE TABLE IF NOT EXISTS `[prefix]_socialbarl` (
-					`id` INT(11) NOT NULL AUTO_INCREMENT,
-					`icon` MEDIUMTEXT NOT NULL,
-					`link` VARCHAR(255) NOT NULL,
-					`text` MEDIUMTEXT NOT NULL,
-					PRIMARY KEY (`id`)
-					) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1';
+			return	'CREATE TABLE IF NOT EXISTS `[prefix]_socialbar` (
+      					`id` INT(11) NOT NULL AUTO_INCREMENT,
+      					`icon` MEDIUMTEXT NOT NULL,
+      					`link` VARCHAR(255) NOT NULL,
+      					`text` MEDIUMTEXT NOT NULL,
+      					PRIMARY KEY (`id`)
+      					) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1';
     }
 
     public function getUpdate($installedVersion)
