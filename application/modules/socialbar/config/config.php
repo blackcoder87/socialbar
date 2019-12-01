@@ -45,12 +45,12 @@ class Config extends \Ilch\Config\Install
 
     public function uninstall()
     {
-       $this->db()->queryMulti('DROP TABLE `[prefix]_social`;');
+       $this->db()->queryMulti('DROP TABLE `[prefix]_socialbar`;');
     }
 
     public function getInstallSql()
     {
-			return	'CREATE TABLE IF NOT EXISTS `[prefix]_social` (
+			return	'CREATE TABLE IF NOT EXISTS `[prefix]_socialbarl` (
 					`id` INT(11) NOT NULL AUTO_INCREMENT,
 					`icon` MEDIUMTEXT NOT NULL,
 					`link` VARCHAR(255) NOT NULL,

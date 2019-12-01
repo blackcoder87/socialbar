@@ -41,6 +41,7 @@
             <label for="text" class="col-lg-2 control-label">
                 <?=$this->getTrans('text') ?>:
             </label>
+            <div class="col-lg-8">
             <input type="text"
                        class="form-control"
                        id="text"

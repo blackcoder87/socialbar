@@ -12,7 +12,7 @@ class Socialbar extends \Ilch\Mapper
   public function getSocial($where = [])
     {
         $socialArray = $this->db()->select('*')
-            ->from('social')
+            ->from('socialbar')
             ->where($where)
             ->execute()
             ->fetchRows();
@@ -51,12 +51,12 @@ class Socialbar extends \Ilch\Mapper
         ];
 
         if ($social->getId()) {
-            $this->db()->update('social')
+            $this->db()->update('socialbar')
                 ->values($fields)
                 ->where(['id' => $social->getId()])
                 ->execute();
         } else {
-            $this->db()->insert('social')
+            $this->db()->insert('socialbar')
                 ->values($fields)
                 ->execute();
         }
@@ -64,7 +64,7 @@ class Socialbar extends \Ilch\Mapper
 
     public function delete($id)
     {
-        $this->db()->delete('social')
+        $this->db()->delete('socialbar')
             ->where(['id' => $id])
             ->execute();
     }
