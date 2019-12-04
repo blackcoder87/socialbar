@@ -16,12 +16,14 @@
             <div class="col-lg-4">
               <select class="form-control fontawesome-select" id="icon" name="icon">
                   <option value=""  disabled><?=$this->getTrans('pleaseSelect') ?></option>
-                  <option value="fa-globe">&#xf0ac; fa-globe</option>
-                  <option value="fa-facebook">&#xf09a; fa-facebook</option>
-                  <option value="fa-twitter">&#xf099; fa-twitter</option>
-                  <option value="fa-steam-square">&#xf1b7; fa-steam-square</option>
-                  <option value="fa-twitch">&#xf1e8; fa-twitch</option>
-                  <option value="fa-youtube">&#xf167; fa-youtube</option>
+                  <option value="fas fa-globe-europe">&#xf7a2; Globus</option>
+                  <option value="fab fa-facebook-f">&#xf39e; Facebook</option>
+                  <option value="fab fa-twitter">&#xf099; Twitter</option>
+                  <option value="fab fa-steam-square">&#xf1b6; Steam</option>
+                  <option value="fab fa-twitch">&#xf1e8; Twitch</option>
+                  <option value="fab fa-youtube">&#xf167; Youtube</option>
+                  <option value="fab fa-whatsapp">&#xf232; Whatsapp</option>
+                  <option value="fab fa-discord">&#xf392; Discord</option>
               </select>
             </div>
         </div>

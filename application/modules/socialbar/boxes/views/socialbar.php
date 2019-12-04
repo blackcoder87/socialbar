@@ -10,7 +10,7 @@ $socials = $this->get('socials');
             <li>
               <a href="<?=$this->escape($social->getLink()) ?>" target="_blank"><?=$this->escape($social->getText()) ?>
                 <div class="btn-social-icon">
-        		     <i class="fa <?=$this->escape($social->getIcon()) ?>"></i>
+        		     <i class="<?=$this->escape($social->getIcon()) ?>"></i>
                 </div>
               </a>
             </li>

@@ -10,7 +10,7 @@ $socials = $this->get('socials');
         <?php foreach ($socials as $social): ?>
             <li>
                 <div class="btn-social-icon">
-                    <i class="fa <?=$this->escape($social->getIcon()) ?>"></i>
+                    <i class="<?=$this->escape($social->getIcon()) ?>"></i>
                 </div>
                 <a href="<?=$this->escape($social->getLink()) ?>" target="_blank"><?=$this->escape($social->getText()) ?></a>
             </li>
