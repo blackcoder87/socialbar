@@ -12,7 +12,7 @@ $socials = $this->get('socials');
                 <div class="btn-social-icon">
                     <i class="<?=$this->escape($social->getIcon()) ?>"></i>
                 </div>
-                <a href="<?=$this->escape($social->getLink()) ?>" target="_blank"><?=$this->escape($social->getText()) ?></a>
+                <a href="<?=$this->escape($social->getLink()) ?>" target="_blank" rel="noopener"><?=$this->escape($social->getText()) ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
