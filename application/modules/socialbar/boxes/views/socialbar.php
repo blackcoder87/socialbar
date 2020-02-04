@@ -9,7 +9,13 @@ $socials = $this->get('socials');
         <?php foreach ($socials as $social): ?>
             <li>
               <a href="<?=$this->escape($social->getLink()) ?>" target="_blank" rel="noopener"><?=$this->escape($social->getText()) ?>
+<<<<<<< HEAD
         		     <div class="btn-social-icon"><i class="<?=$this->escape($social->getIcon()) ?>"></i></div>
+=======
+                <div class="btn-social-icon">
+        		     <i class="<?=$this->escape($social->getIcon()) ?>"></i>
+                </div>
+>>>>>>> cb1c57938583550db739a39722c7a54f377863fc
               </a>
             </li>
         <?php endforeach; ?>
