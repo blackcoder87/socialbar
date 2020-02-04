@@ -8,10 +8,8 @@ $socials = $this->get('socials');
     <ul class="list-unstyled">
         <?php foreach ($socials as $social): ?>
             <li>
-              <a href="<?=$this->escape($social->getLink()) ?>" target="_blank"><?=$this->escape($social->getText()) ?>
-                <div class="btn-social-icon">
-        		     <i class="<?=$this->escape($social->getIcon()) ?>"></i>
-                </div>
+              <a href="<?=$this->escape($social->getLink()) ?>" target="_blank" rel="noopener"><?=$this->escape($social->getText()) ?>
+        		     <div class="btn-social-icon"><i class="<?=$this->escape($social->getIcon()) ?>"></i></div>
               </a>
             </li>
         <?php endforeach; ?>
