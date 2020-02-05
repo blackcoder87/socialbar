@@ -1,7 +1,7 @@
-<link href="<?=$this->getBoxUrl('static/css/socialbar.css') ?>" rel="stylesheet">
 <?php
 $socials = $this->get('socials');
 ?>
+<link href="<?=$this->getBoxUrl('static/css/socialbar.css') ?>" rel="stylesheet">
 
 <?php if (!empty($socials)): ?>
   <div id="social">
@@ -10,9 +10,6 @@ $socials = $this->get('socials');
             <li>
               <a href="<?=$this->escape($social->getLink()) ?>" target="_blank" rel="noopener"><?=$this->escape($social->getText()) ?>
         		     <div class="btn-social-icon"><i class="<?=$this->escape($social->getIcon()) ?>"></i></div>
-                <div class="btn-social-icon">
-        		     <i class="<?=$this->escape($social->getIcon()) ?>"></i>
-                </div>
               </a>
             </li>
         <?php endforeach; ?>
