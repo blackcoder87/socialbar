@@ -10,7 +10,7 @@ class Config extends \Ilch\Config\Install
 {
     public $config = [
         'key' => 'socialbar',
-        'version' => '1.5.0',
+        'version' => '1.6.0',
         'icon_small' => 'fa-question-circle',
         'author' => 'Slipi',
         'link' => 'http://ilch.de',
