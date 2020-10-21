@@ -24,9 +24,8 @@
                   <option value="fab fa-youtube" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-youtube') ? 'selected' : '' ?>> Youtube</option>
                   <option value="fab fa-whatsapp" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-whatsapp') ? 'selected' : '' ?>> Whatsapp</option>
                   <option value="fab fa-discord" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-discord') ? 'selected' : '' ?>> Discord</option>
-                  <option value="fa fa-instagram" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fa fa-instagram') ? 'selected' : '' ?>> Instagram</option>fa fa-snapchat
-                  <option value="fa fa-snapchat" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fa fa-instagram') ? 'selected' : '' ?>> Snapchat</option>
                   <option value="fa fa-instagram" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fa fa-instagram') ? 'selected' : '' ?>> Instagram</option>
+                  <option value="fa fa-snapchat" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fa fa-snapchat') ? 'selected' : '' ?>> Snapchat</option>
               </select>
             </div>
         </div>
