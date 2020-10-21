@@ -1,4 +1,4 @@
-<h1>
+
     <?php if (!empty($this->get('social'))) {
         echo $this->getTrans('edit');
     } else {
@@ -16,14 +16,17 @@
             <div class="col-lg-4">
               <select class="form-control fontawesome-select" id="icon" name="icon">
                   <option value=""  disabled><?=$this->getTrans('pleaseSelect') ?></option>
-                  <option value="fas fa-globe-europe">&#xf7a2; Globus</option>
-                  <option value="fab fa-facebook-f">&#xf39e; Facebook</option>
-                  <option value="fab fa-twitter">&#xf099; Twitter</option>
-                  <option value="fab fa-steam-square">&#xf1b6; Steam</option>
-                  <option value="fab fa-twitch">&#xf1e8; Twitch</option>
-                  <option value="fab fa-youtube">&#xf167; Youtube</option>
-                  <option value="fab fa-whatsapp">&#xf232; Whatsapp</option>
-                  <option value="fab fa-discord">&#xf392; Discord</option>
+                  <option value="fas fa-globe-europe" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fas fa-globe-europe') ? 'selected' : '' ?>> Globus</option>
+                  <option value="fab fa-facebook-f" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-facebook-f') ? 'selected' : '' ?>> Facebook</option>
+                  <option value="fab fa-twitter" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-twitter') ? 'selected' : '' ?>> Twitter</option>
+                  <option value="fab fa-steam-square" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-steam-square') ? 'selected' : '' ?>> Steam</option>
+                  <option value="fab fa-twitch" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-twitch') ? 'selected' : '' ?>> Twitch</option>
+                  <option value="fab fa-youtube" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-youtube') ? 'selected' : '' ?>> Youtube</option>
+                  <option value="fab fa-whatsapp" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-whatsapp') ? 'selected' : '' ?>> Whatsapp</option>
+                  <option value="fab fa-discord" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fab fa-discord') ? 'selected' : '' ?>> Discord</option>
+                  <option value="fa fa-instagram" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fa fa-instagram') ? 'selected' : '' ?>> Instagram</option>fa fa-snapchat
+                  <option value="fa fa-snapchat" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fa fa-instagram') ? 'selected' : '' ?>> Snapchat</option>
+                  <option value="fa fa-instagram" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fa fa-instagram') ? 'selected' : '' ?>> Instagram</option>
               </select>
             </div>
         </div>
