@@ -9,7 +9,7 @@
     <form class="form-horizontal" method="POST">
         <?=$this->getTokenField() ?>
 
-        <div class="form-group <?=$this->validation()->hasError('icon') ? 'has-error' : '' ?>">
+        <div class="row form-group ilch-margin-b <?=$this->validation()->hasError('icon') ? 'has-error' : '' ?>">
             <label for="icon" class="col-lg-2 control-label">
                 <?=$this->getTrans('icon') ?>:
             </label>
@@ -29,7 +29,7 @@
               </select>
             </div>
         </div>
-        <div class="form-group <?=$this->validation()->hasError('link') ? 'has-error' : '' ?>">
+        <div class="row form-group ilch-margin-b <?=$this->validation()->hasError('link') ? 'has-error' : '' ?>">
             <label for="link" class="col-lg-2 control-label">
                 <?=$this->getTrans('link') ?>:
             </label>
@@ -41,7 +41,7 @@
                        value="<?=($this->get('social') != '') ? $this->escape($this->get('social')->getLink()) : $this->escape($this->originalInput('link')) ?>" />
             </div>
         </div>
-        <div class="form-group <?=$this->validation()->hasError('text') ? 'has-error' : '' ?>">
+        <div class="row form-group ilch-margin-b <?=$this->validation()->hasError('text') ? 'has-error' : '' ?>">
             <label for="text" class="col-lg-2 control-label">
                 <?=$this->getTrans('text') ?>:
             </label>
