@@ -9,11 +9,11 @@
     <form class="form-horizontal" method="POST">
         <?=$this->getTokenField() ?>
 
-        <div class="row form-group ilch-margin-b <?=$this->validation()->hasError('icon') ? 'has-error' : '' ?>">
-            <label for="icon" class="col-lg-2 control-label">
+        <div class="row mb-3 <?=$this->validation()->hasError('icon') ? 'has-error' : '' ?>">
+            <label for="icon" class="col-xl-2 control-label">
                 <?=$this->getTrans('icon') ?>:
             </label>
-            <div class="col-lg-4">
+            <div class="col-xl-4">
               <select class="form-control fontawesome-select" id="icon" name="icon">
                   <option value=""  disabled><?=$this->getTrans('pleaseSelect') ?></option>
                   <option value="fas fa-globe-europe" <?=($this->get('social') != '' && $this->get('social')->getIcon() === 'fas fa-globe-europe') ? 'selected' : '' ?>> Globus</option>
@@ -29,11 +29,11 @@
               </select>
             </div>
         </div>
-        <div class="row form-group ilch-margin-b <?=$this->validation()->hasError('link') ? 'has-error' : '' ?>">
-            <label for="link" class="col-lg-2 control-label">
+        <div class="row mb-3 <?=$this->validation()->hasError('link') ? 'has-error' : '' ?>">
+            <label for="link" class="col-xl-2 control-label">
                 <?=$this->getTrans('link') ?>:
             </label>
-            <div class="col-lg-4">
+            <div class="col-xl-4">
                 <input type="url"
                        class="form-control"
                        id="link"
@@ -41,11 +41,11 @@
                        value="<?=($this->get('social') != '') ? $this->escape($this->get('social')->getLink()) : $this->escape($this->originalInput('link')) ?>" />
             </div>
         </div>
-        <div class="row form-group ilch-margin-b <?=$this->validation()->hasError('text') ? 'has-error' : '' ?>">
-            <label for="text" class="col-lg-2 control-label">
+        <div class="row mb-3 <?=$this->validation()->hasError('text') ? 'has-error' : '' ?>">
+            <label for="text" class="col-xl-2 control-label">
                 <?=$this->getTrans('text') ?>:
             </label>
-            <div class="col-lg-8">
+            <div class="col-xl-8">
             <input type="text"
                        class="form-control"
                        id="text"
