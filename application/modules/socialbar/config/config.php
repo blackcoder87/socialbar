@@ -10,7 +10,7 @@ class Config extends \Ilch\Config\Install
 {
     public $config = [
         'key' => 'socialbar',
-        'version' => '1.6.0',
+        'version' => '1.7.0',
         'icon_small' => 'fa-question-circle',
         'author' => 'Slipi',
         'link' => 'http://ilch.de',
@@ -34,7 +34,7 @@ class Config extends \Ilch\Config\Install
                 ]
             ]
         ],
-        'ilchCore' => '2.1.16',
+        'ilchCore' => '2.1.53',
         'phpVersion' => '5.6'
     ];
 
