@@ -1,6 +1,6 @@
 <h1><?=$this->getTrans('manage') ?></h1>
 <?php if (!empty($this->get('socials'))): ?>
-    <form class="form-horizontal" method="POST">
+    <form method="POST">
         <?=$this->getTokenField() ?>
         <div class="table-responsive">
             <table class="table table-hover table-striped">
