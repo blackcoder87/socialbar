@@ -11,9 +11,9 @@ class Config extends \Ilch\Config\Install
     public $config = [
         'key' => 'socialbar',
         'version' => '1.7.0',
-        'icon_small' => 'fa-question-circle',
+        'icon_small' => 'fa-solid fa-circle-question',
         'author' => 'Slipi',
-        'link' => 'http://ilch.de',
+        'link' => 'https://ilch.de',
         'languages' => [
             'de_DE' => [
                 'name' => 'Social-Bar',
@@ -34,8 +34,8 @@ class Config extends \Ilch\Config\Install
                 ]
             ]
         ],
-        'ilchCore' => '2.1.53',
-        'phpVersion' => '5.6'
+        'ilchCore' => '2.2.0',
+        'phpVersion' => '7.3'
     ];
 
     public function install()
@@ -61,6 +61,11 @@ class Config extends \Ilch\Config\Install
 
     public function getUpdate($installedVersion)
     {
+        switch ($installedVersion) {
+            case "1.6.0":
+                $this->db()->update('modules', ['icon_small' => $this->config['icon_small']], ['key' => $this->config['key']])->execute();
+        }
 
+        return '"' . $this->config['key'] . '" Update-function executed.';
     }
 }
